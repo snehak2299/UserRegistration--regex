@@ -4,26 +4,17 @@ import java.util.Scanner;
 
 public class UserRegistration{
 	public static void main(String[] args) {
-		String regex = "^[A-Z][a-z]{3,}";
-		Scanner sc = new Scanner (System.in);
-		System.out.println("enter last name");
-		String lastName = sc.nextLine();
-		if(lastName.matches(regex)) {
-			System.out.println("last name is valid");
-		}
-		else 
-		{
-			System.out.println("last name is not valid");
-		}
-		String regexEmail = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
-		System.out.println("Enter valid email");
-		String email = sc.nextLine();
-		if(email.matches(regexEmail)) {
-			System.out.println("valid email");
+		Scanner sc = new Scanner(System.in);
+		String regexPhoneNumber = "^[0-9]{1,}\s[0-9]{10}$";
+		System.out.println("enter valid phone number along country code");
+		String phoneNumb = sc.nextLine();
+		if(phoneNumb.matches(regexPhoneNumber)) {
+			System.out.println("phone number is valid");
 		}
 		else {
-			System.out.println("invalid email");
+			System.out.println("phone number is not valid");
 		}
+		
 	
 	}
 }
