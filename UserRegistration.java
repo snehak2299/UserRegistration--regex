@@ -15,6 +15,15 @@ public class UserRegistration{
 		{
 			System.out.println("last name is not valid");
 		}
+		String regexEmail = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
+		System.out.println("Enter valid email");
+		String email = sc.nextLine();
+		if(email.matches(regexEmail)) {
+			System.out.println("valid email");
+		}
+		else {
+			System.out.println("invalid email");
+		}
 	
 	}
 }
