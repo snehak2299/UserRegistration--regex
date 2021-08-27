@@ -14,7 +14,7 @@ public class UserRegistration{
 		else {
 			System.out.println("phone number is not valid");
 		}
-		String regexPassword = "^(?=.*[A-Z])[a-zA-Z]{8,}$"; // UC6
+		String regexPassword = "^(?=.*\\d)(?=.*[A-Z])[a-zA-Z0-9]{8,}$"; // UC7
 		System.out.println("enter password more than 8 charcter");
 		String password = sc.nextLine();
 		if(password.matches(regexPassword)) {
