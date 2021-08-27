@@ -15,6 +15,6 @@ public class UserRegistration{
 		{
 			System.out.println("name is not valid");
 		}
+	
 	}
-
 }
