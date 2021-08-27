@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class UserRegistration{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String regexPhoneNumber = "^[0-9]{1,}\s[0-9]{10}$";
+		String regexPhoneNumber = "^[0-9]{1,}\s[0-9]{10}$"; // UC4
 		System.out.println("enter valid phone number along country code");
 		String phoneNumb = sc.nextLine();
 		if(phoneNumb.matches(regexPhoneNumber)) {
@@ -14,7 +14,7 @@ public class UserRegistration{
 		else {
 			System.out.println("phone number is not valid");
 		}
-		String regexPassword = "^[A-Za-z0-9]{8,}"; // UC5
+		String regexPassword = "^(?=.*[A-Z])[a-zA-Z]{8,}$"; // UC6
 		System.out.println("enter password more than 8 charcter");
 		String password = sc.nextLine();
 		if(password.matches(regexPassword)) {
