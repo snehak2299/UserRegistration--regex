@@ -23,6 +23,15 @@ public class UserRegistration{
 		else {
 			System.out.println("invalid password");
 		}
+		String regexEmail = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"; // UC9
+		System.out.println("Enter valid email");
+		String email = sc.nextLine();
+		if(email.matches(regexEmail)) {
+			System.out.println("valid email");
+		}
+		else {
+			System.out.println("invalid email");
+		}
 		
 	
 	}
